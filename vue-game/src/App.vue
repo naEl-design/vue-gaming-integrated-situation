@@ -68,7 +68,7 @@ export default {
   data() {
     return {
       historicalFigures: [
-        { name: 'kagame', image: 'kagame.jpg', fact: 'Rwabugiri expanded Rwanda and strengthened its leadership.' },
+   { name: 'kagame', image: 'kagame.jpg', fact: 'Rwabugiri expanded Rwanda and strengthened its leadership.' },
         { name: 'Rwigema', image: 'rwigema.jpg', fact: 'She was Rwanda’s first female Prime Minister.' },
         { name: 'King Mutara III Rudahigwa', image: 'hero3.jpg', fact: 'He helped modernize Rwanda and promoted unity.' },
         { name: 'Queen Mother Kanjogera', image: 'kanjogera.jpg', fact: 'A powerful queen mother in Rwanda’s royal history.' },
@@ -325,5 +325,113 @@ h1 {
   padding: 30px;
   border-radius: 12px;
   max-width: 500px;
+}
+@media (max-width: 1024px) {
+  .board {
+    grid-template-columns: repeat(3, 90px);
+    grid-template-rows: repeat(3, 90px);
+  }
+
+  .tile {
+    width: 90px;
+    height: 90px;
+    font-size: 18px;
+  }
+
+  .levels-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .score {
+    font-size: 18px;
+  }
+
+  .board {
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 2px;
+  }
+
+  .tile {
+    width: 80px;
+    height: 80px;
+    font-size: 16px;
+  }
+
+  .controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .controls button {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  .levels-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .modal-content {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .board {
+    grid-template-columns: repeat(3, 65px);
+    grid-template-rows: repeat(3, 65px);
+  }
+
+  .tile {
+    width: 65px;
+    height: 65px;
+    font-size: 14px;
+  }
+
+  .levels-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .level-card img,
+  .locked-box {
+    height: 80px;
+  }
+
+  .controls button,
+  .modal button {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .score,
+  .message {
+    font-size: 16px;
+  }
 }
 </style>
